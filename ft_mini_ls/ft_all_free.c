@@ -6,7 +6,7 @@
 /*   By: ntoshihi <ntoshihi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 19:06:27 by ntoshihi          #+#    #+#             */
-/*   Updated: 2020/12/04 19:08:44 by ntoshihi         ###   ########.fr       */
+/*   Updated: 2020/12/06 15:09:32 by ntoshihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ void	all_free(t_info *p)
 	t_info *tmp;
 
 	tmp = NULL;
-	while(p)
+	while (p)
 	{
 		tmp = p->next;
-		free (p);
+		free(p);
 		p = tmp;
 	}
 }

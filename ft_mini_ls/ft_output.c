@@ -6,7 +6,7 @@
 /*   By: ntoshihi <ntoshihi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 18:22:29 by ntoshihi          #+#    #+#             */
-/*   Updated: 2020/12/04 18:37:25 by ntoshihi         ###   ########.fr       */
+/*   Updated: 2020/12/06 15:09:05 by ntoshihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,12 @@
 
 void	output(t_info *p)
 {
-	int i;
 	const char *s;
 
-	while(p)
+	while (p != NULL)
 	{
-		i = 0;
 		s = p->name;
-		while(s[i])
-		{
-			write(1, &s[i], 1);
-			i++;
-		}
+		write(1, s, ft_strlen(s));
 		write(1, "\n", 1);
 		p = p->next;
 	}
